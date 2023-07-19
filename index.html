@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculatrice</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="main.js"></script>
+    <style>
+        button{
+            width: 18%;
+            font-size: 1.8rem !important;
+            border: 1px solid #f4f4f4;
+        }  
+        button:hover:not(.blue){
+            background-color: #f0f0f0 !important;
+        }
+        .white{
+            background-color: #fff;
+        }
+        .affichage{
+            text-align: end;
+            color: #000;
+            font-weight: 700;
+            font-size: 2rem;
+            padding-right: 8.3%;
+        }
+
+        .affichageOperation{
+            text-align: end;
+            padding-right: 8.3% !important;
+            padding-top: 7%;
+        }
+        h1{
+           font-weight: 800;
+           font-size: 217% !important;
+           font-family: Arial, Helvetica, sans-serif; 
+        }
+
+        h3{
+            border:dotted;
+        }
+
+        .headerHistorique:hover{
+            opacity: .8;
+        }
+
+        .headerHistorique{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 18px;
+        }
+        .historique{
+            width: 22%;
+            height: 99%;
+            position: absolute;
+            right: 0%;
+            background-color: #e7e9eb;
+            overflow: auto;
+        }
+
+        .contenuHistorique >p{
+            margin-bottom: 5px;
+            padding:0px 15px !important;
+        }
+
+        .contenuHistorique > p:hover{
+            background-color: #8f8e8e25 !important; 
+            cursor: pointer;
+        }
+
+        body{
+            position: relative;
+        }
+        @media only screen and (max-width:750px){
+            .historique{
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid text-start text-primary border" style="height: 560px;background-color: #e7e9eb;">
+        <h1 class="pt-2 display-3 w-100 ps-3" style="display: flex;">
+            <p><img src="./imgs/calculator-fill.svg" alt="calculator-fill" srcset=""></p> 
+            <p style="color:#1191e6;">Calculatrice Standard</p>
+        </h1>
+        <div class="historique">
+            <p  class=" text-secondary text-start h3 headerHistorique">Historique</p>
+            <p class=" text-dark text-center h3 contenuHistorique"></p>
+           
+        </div>
+        <div class="row mb-1 ps-3 pb-2 h-100" style="background-color: #e7e9eb;">
+            <div class="col-12 col-sm-8 col-md-10 affichageOperation"></div>
+            <div class="col-12 col-sm-8 col-md-10 h-25 me-3 ms-2 border affichage">0</div>
+            <div class="col-12 col-sm-8 col-md-10 mt-1">    
+                <button type="button" class="btn  btn-light h-100 white">9</button>
+                <button type="button" class="btn  btn-light h-100 white">8</button>
+                <button type="button" class="btn  btn-light h-100 white">7</button>
+                <button type="button" class="btn  btn-light h-100">1/x</button>
+                <button type="button" class="btn  btn-light h-100 btnClear">C</button>
+            </div>
+            
+            <div class="col-12 col-sm-8 col-md-10 mt-1">
+                <button type="button" class="btn btn-light h-100 white">6</button>
+                <button type="button" class="btn btn-light h-100 white">5</button>
+                <button type="button" class="btn btn-light h-100 white">4</button>
+                <button type="button" class="btn btn-light h-100">%</button>
+                <button type="button" class="btn btn-light h-100">.</button>
+            </div>
+
+            <div class="col-12 col-sm-8 col-md-10 mt-1">
+                <button type="button" class="btn btn-light h-100 white">3</button>
+                <button type="button" class="btn btn-light h-100 white">2</button>
+                <button type="button" class="btn btn-light h-100 white">1</button>
+                <button type="button" class="btn btn-light h-100">+</button>
+                <button type="button" class="btn btn-light h-100">-</button>
+            </div>
+
+            <div class="col-12 col-sm-8 col-md-10 mt-1">
+                <button type="button" class="btn btn-light h-100 white">x</button>
+                <button type="button" class="btn btn-light h-100 white">0</button>
+                <button type="button" class="btn btn-light h-100 white">/</button>
+                <button type="button" class="btn btn-light h-100 btnDEL ">DEL</button>
+                <button type="button" class="btn btn-primary h-100 blue ">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
